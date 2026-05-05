@@ -2,6 +2,12 @@
 > Click on any link below to start downloading directly.<br><br/>
 
 
+### 📅 2026-05-05 16:51 IR
+- 🎬 [A Musical Analysis of Every Song in Deltarune Chapter 3.mp4](https://github.com/rahamisthaking/sandbox/raw/main/dl/A%20Musical%20Analysis%20of%20Every%20Song%20in%20Deltarune%20Chapter%203.mp4) `83.5MB`
+
+---
+
+
 ### 📅 2026-05-05 14:01 IR
 - 🗜️ [They Wanted Me Dead.mp4.zip](https://github.com/rahamisthaking/sandbox/raw/main/dl/They%20Wanted%20Me%20Dead.mp4.zip) `30.5MB`
 
