@@ -2,6 +2,18 @@
 > Click on any link below to start downloading directly.<br><br/>
 
 
+### 📅 2026-05-05 07:28 IR
+- 🗜️ [Mastering Regent after the changes ｜ Ascension 10 ｜ Slay the Spire 2.mp4.zip](https://github.com/rahamisthaking/sandbox/raw/main/dl/Mastering%20Regent%20after%20the%20changes%20%EF%BD%9C%20Ascension%2010%20%EF%BD%9C%20Slay%20the%20Spire%202.mp4.zip) `8.8MB`
+
+- 🗜️ [Mastering Regent after the changes ｜ Ascension 10 ｜ Slay the Spire 2.mp4.z01](https://github.com/rahamisthaking/sandbox/raw/main/dl/Mastering%20Regent%20after%20the%20changes%20%EF%BD%9C%20Ascension%2010%20%EF%BD%9C%20Slay%20the%20Spire%202.mp4.z01) `95.0MB`
+
+- 🗜️ [Mastering Regent after the changes ｜ Ascension 10 ｜ Slay the Spire 2.mp4.z02](https://github.com/rahamisthaking/sandbox/raw/main/dl/Mastering%20Regent%20after%20the%20changes%20%EF%BD%9C%20Ascension%2010%20%EF%BD%9C%20Slay%20the%20Spire%202.mp4.z02) `95.0MB`
+
+- 🗜️ [Mastering Regent after the changes ｜ Ascension 10 ｜ Slay the Spire 2.mp4.zip](https://github.com/rahamisthaking/sandbox/raw/main/dl/Mastering%20Regent%20after%20the%20changes%20%EF%BD%9C%20Ascension%2010%20%EF%BD%9C%20Slay%20the%20Spire%202.mp4.zip) `8.8MB`
+
+---
+
+
 ### 📅 2026-05-05 00:57 IR
 - 🎬 [Valve just broke the internet with this artwork change....mp4](https://github.com/rahamisthaking/sandbox/raw/main/dl/Valve%20just%20broke%20the%20internet%20with%20this%20artwork%20change....mp4) `67.3MB`
 
