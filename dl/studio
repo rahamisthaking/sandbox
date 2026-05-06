@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <meta name="description" content="Record, convert, clip and download your favorite streaming content for free!">
+    <meta name="keywords" content="youtube to mp3, download youtube, convert youtube, internet dvr, convert streaming video, convert streaming audio, convert video to mp3, download streaming video, record online video, clip online audio">
+    <title>📼 Dirpy | Studio</title>
+    <script>
+      (function(){
+        var s = localStorage.getItem('theme');
+        var p = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-bs-theme', s || p);
+      })();
+    </script>
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/static/css/style.css?v=2">
+    <link rel="stylesheet" href="/static/css/cm-spinner.css?v=2">
+    <style id="antiClickjack">body{display:none !important;}</style>
+    <script type="text/javascript">
+        if (self === top) {
+            var antiClickjack = document.getElementById("antiClickjack");
+            antiClickjack.parentNode.removeChild(antiClickjack);
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <script src="https://browser.sentry-cdn.com/5.16.1/bundle.min.js" integrity="sha384-XeIbINcUQP10HtmVHwZigannjNDpoQRe+uhAoW9J5HU5dHFpilP164LjqO78xtIB" crossorigin="anonymous"></script>
+    
+    
+    
+</head>
+<body id="main" style="padding-top: 0px">
+    
+
+<noscript>
+    <div class="alert alert-danger text-center" role="alert" style="margin-bottom: 0px">
+        Dirpy requires JavaScript to function correctly. Please enable JavaScript in your browser.
+    </div>
+</noscript>
+
+
+    <div class="alert alert-info text-center" role="alert" style="margin-bottom: 0px">
+        SavePorn is now a part of Dirpy! Select your quality, format, and hit "Record Audio/Video" to start your download.
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-bottom bg-body-tertiary border-top" role="navigation">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="/static/img/logo-115x50.png" height="25" width="58"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/batch">Batch <sup><span class="badge bg-success">NEW</span></sup></a></li>
+                <li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/privacy">Privacy</a></li>
+                <li class="nav-item"><a class="nav-link" href="/dmca">DMCA</a></li>
+                <li class="nav-item"><a class="nav-link" href="/legal">Legal</a></li>
+                <li class="nav-item"><a class="nav-link" href="/terms">Terms of Service</a></li>
+                <li class="nav-item">
+                    
+                        <a class="nav-link" href="/language/jp"><img src="/static/img/flag_jp.png"> 日本語</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+                        <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container" style="padding-top: 20px">
+        
+
+
+
+
+
+    <div class="row">
+  <div class="col-sm-3">
+    <a href="/"><img src="/static/img/logo220.png" alt="Dirpy!" class="img-fluid"></a>
+      
+        <a class="d-block mt-1" href="javascript:window.open('https://dirpy.com/studio?url='+encodeURIComponent(location.href))();"><span class="badge bg-success"><i class="fa-solid fa-bookmark"></i> Bookmarklet</span></a>
+      
+  </div>
+  <div class="col-sm-9 text-end">
+    <div>
+      
+      <a href="/pricing" class="btn btn-warning">Try Dirpy Premium!</a>
+      <a href="/user/recovery" class="btn btn-info">Sign In</a>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="card card-body mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="custom-form">
+
+                
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">New Search</h2>
+    </div>
+    <div class="card-body">
+        
+                    <form method="post" action="/" id="urlSubmit">
+                        <div class="input-group">
+                            <input placeholder="Enter Video URL..." name="input" id="input" type="text" maxlength="256" class="form-control" value="https://www.pornhub.com/view_video.php?viewkey=ph61f31ff0df2d1">
+                            <input type="hidden" name="csrf_token" value="IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I"/>
+                            <button class="btn btn-info" id="submitBtn" type="submit">dirpy!</button>
+                        </div>
+                    </form>
+                
+    </div>
+    
+</div>
+
+
+                
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">Filename</h2>
+    </div>
+    <div class="card-body">
+        
+                    <input type="text" class="form-control" name="output_file" aria-required="true" required="required" pattern=".{1,}" id="filename" maxlength="64" value="ADULT TIME - Siri Dahl&#39;s FIRST BISEXUAL MMF THREESOME With Wolf Hudson &amp; Johnny Hill! FULL SCENE!">
+                
+    </div>
+    
+</div>
+
+
+                
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">Edit Start and End Time</h2>
+    </div>
+    <div class="card-body">
+        
+                    <div class="row g-2">
+                        <div class="col-sm-6 col-12">
+                            <div class="input-group input-group-sm">
+                                <label for="startTime" class="input-group-text">Start</label>
+                                <input type="text" class="form-control" aria-required="true" required="required" pattern="^\d+:\d{2}:\d{2}$" value="00:00:00" name="from" id="startTime">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <div class="input-group input-group-sm">
+                                <label for="endTime" class="input-group-text">End</label>
+                                <input type="text" class="form-control" aria-required="true" required="required" pattern="^\d+:\d{2}:\d{2}$" value="00:46:33" name="to" id="endTime">
+                            </div>
+                        </div>
+                    </div>
+                
+    </div>
+    
+</div>
+
+
+                
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">Edit ID3 Tag Data</h2>
+    </div>
+    <div class="card-body">
+        
+                    <form id="form_id3">
+                        <div class="row g-2 mb-2">
+                            
+<div class="col-12">
+    <div class="input-group input-group-sm">
+        <label for="title" class="input-group-text text-nowrap">Title</label>
+        <input type="text" class="form-control" id="title" name="ID3[title]" maxlength="64" value="ADULT TIME - Siri Dahl&#39;s FIRST BISEXUAL MMF THREESOME With Wolf Hudson &amp; Johnny Hill! FULL SCENE!">
+    </div>
+</div>
+
+                        </div>
+                        <div class="row g-2 mb-2">
+                            
+<div class="col-12">
+    <div class="input-group input-group-sm">
+        <label for="artist" class="input-group-text text-nowrap">Artist</label>
+        <input type="text" class="form-control" id="artist" name="ID3[artist]" maxlength="64" value="">
+    </div>
+</div>
+
+                        </div>
+                        <div class="row g-2 mb-2">
+                            
+<div class="col-sm-6 col-12">
+    <div class="input-group input-group-sm">
+        <label for="comment" class="input-group-text text-nowrap">Comment</label>
+        <input type="text" class="form-control" id="comment" name="ID3[comment]" maxlength="64" value="">
+    </div>
+</div>
+
+                            
+<div class="col-sm-6 col-12">
+    <div class="input-group input-group-sm">
+        <label for="genre" class="input-group-text text-nowrap">Genre</label>
+        <input type="text" class="form-control" id="genre" name="ID3[genre]" maxlength="64" value="">
+    </div>
+</div>
+
+                        </div>
+                        <div class="row g-2 mb-2">
+                            
+<div class="col-sm-5 col-12">
+    <div class="input-group input-group-sm">
+        <label for="album" class="input-group-text text-nowrap">Album</label>
+        <input type="text" class="form-control" id="album" name="ID3[album]" maxlength="64" value="">
+    </div>
+</div>
+
+                            
+<div class="col-sm-3 col-6">
+    <div class="input-group input-group-sm">
+        <label for="track" class="input-group-text text-nowrap">Track</label>
+        <input type="text" class="form-control" id="track" name="ID3[track]" maxlength="2" value="">
+    </div>
+</div>
+
+                            
+<div class="col-sm-4 col-6">
+    <div class="input-group input-group-sm">
+        <label for="year" class="input-group-text text-nowrap">Year</label>
+        <input type="text" class="form-control" id="year" name="ID3[track]" maxlength="4" value="">
+    </div>
+</div>
+
+                        </div>
+                    </form>
+                
+    </div>
+    
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-1">
+                <div class="card-header">
+                    <h2 class="card-title h6 mb-0">ADULT TIME - Siri Dahl&#39;s FIRST BISEXUAL MMF THREESOME With Wolf Hudson &amp; Johnny Hill! FULL SCENE!</h2>
+                </div>
+                <div class="card-body text-center p-2">
+                    
+                    <video id="media-player" class="mx-auto" width="535" height="238" style="max-width:100%" controls poster="https://ei.phncdn.com/videos/202201/27/402061481/original/(m=q1LUW-WbeaAaGwObaaaa)(mh=PRw7WlA_7aNohEh1)0.jpg">
+                        
+                        <source id="media-source" src="https://ev.phncdn.com/videos/202201/27/402061481/1080P_4000K_402061481.mp4?validfrom=1778069122&amp;validto=1778076322&amp;rate=50000k&amp;burst=50000k&amp;ip=85.209.19.172&amp;ipa=1&amp;hash=sVs2%2B820UxoW2f%2ByxpH6hkXCrCs%3D" type="video/mp4">
+                        
+                    </video>
+                    <a href="https://www.pornhub.com/view_video.php?viewkey=ph61f31ff0df2d1" target="_blank" rel="nofollow" style="display:inline-block;">
+                        <img id="fallback-thumbnail" class="mx-auto" height="238" style="display:none; max-width:100%" src="https://ei.phncdn.com/videos/202201/27/402061481/original/(m=q1LUW-WbeaAaGwObaaaa)(mh=PRw7WlA_7aNohEh1)0.jpg" alt="Thumbnail">
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="text-center my-2">
+                <button class="btn btn-warning btn-lg w-100" onclick="showModal('premiumModal');document.getElementById('premiumFreeButton').style.display='none';hideModal('downloadModal');">Premium Download</button>
+            </div>
+            
+            <form id="downloadForm" action="/download/file" method="POST" enctype="multipart/form-data" onsubmit="return onDownload();">
+                <input type="hidden" name="file_type" id="fileType" value="">
+                
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">Record Audio</h2>
+    </div>
+    <div class="card-body">
+        
+                    <div class="row align-items-center g-2">
+                        <div class="col-sm-5">
+                            
+<select id="audioBitrate" name="audio_bitrate" class="form-select">
+    
+        
+            <option value="320">Highest (320 kbps)</option>
+        
+    
+        
+            <option value="256">High (256 kbps)</option>
+        
+    
+        
+            <option value="192">Medium (192 kbps)</option>
+        
+    
+        
+            <option value="160">Medium (160 kbps)</option>
+        
+    
+        
+            <option value="128">Medium (128 kbps)</option>
+        
+    
+        
+            <option value="96">Low (96 kbps)</option>
+        
+    
+        
+            <option value="64">Low (64 kbps)</option>
+        
+    
+        
+            <option value="32">Lowest (32 kbps)</option>
+        
+    
+</select>
+
+                        </div>
+                        <div class="col-sm-3">
+                            
+<select id="audioCodec" name="audio_codec" premium="premium" class="form-select" aria-warning="false">
+    
+        <option value="mp3">mp3</option>
+    
+        <option value="m4a">m4a*</option>
+    
+        <option value="flac">flac*</option>
+    
+        <option value="aac">aac*</option>
+    
+        <option value="wav">wav*</option>
+    
+</select>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-info w-100" type="button" id="audioBtn" onclick="return setFileType('audio');">Record Audio</button>
+                        </div>
+                    </div>
+                
+    </div>
+    
+</div>
+
+                
+                    
+
+  
+
+<div class="card shadow-sm  mb-3">
+    <div class="card-header">
+        <h2 class="card-title h6 mb-0">Record Video</h2>
+    </div>
+    <div class="card-body">
+        
+                        <div class="row align-items-center g-2">
+                            <div class="col-sm-5">
+                                <select id="videoQuality" name="video_quality" class="form-select" premium="premium" aria-warning="true">
+                                    
+                                        <option disabled>─ PREMIUM ─</option>
+                                        
+                                            <option value="1080 PREMIUM">1920x1080*</option>
+                                        
+                                            <option value="720 PREMIUM">1280x720*</option>
+                                        
+                                        <option disabled>─ FREE ─</option>
+                                    
+                                    
+                                        <option value="480 FREE">640x480</option>
+                                    
+                                        <option value="480 FREE">854x480</option>
+                                    
+                                        <option value="240 FREE">320x240</option>
+                                    
+                                        <option value="240 FREE">426x240</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                
+<select id="videoFormat" name="video_format" premium="premium" class="form-select" aria-warning="false">
+    
+        <option value="mp4">mp4</option>
+    
+        <option value="mkv">mkv*</option>
+    
+        <option value="webm">webm*</option>
+    
+        <option value="mov">mov*</option>
+    
+        <option value="flv">flv*</option>
+    
+        <option value="avi">avi*</option>
+    
+        <option value="mpg">mpg*</option>
+    
+        <option value="wmv">wmv*</option>
+    
+        <option value="wma">wma*</option>
+    
+</select>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-info w-100" type="button" id="videoBtn" onclick="return setFileType('video');">Record Video</button>
+                            </div>
+                        </div>
+                        <input type="hidden" id="subtitles" name="subtitles" value=false>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" id="subtitles_checkbox" premium="premium" type="checkbox" value="subtitles" aria-warning="false">
+                            <label class="form-check-label" for="subtitles_checkbox">Embed Subtitles*</label>
+                        </div>
+                    
+    </div>
+    
+</div>
+
+                
+                
+                    <input type="hidden" id="highestFreeVidQuality" name="highest_free_vid_quality" value="480 FREE"/>
+                
+                <input type="hidden" name="video_id" value="ph61f31ff0df2d1">
+                <input type="hidden" id="outputFileName" name="output_filename" value="placeholder">
+                <input type="hidden" name="csrf_token" value="IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I"/>
+                <input type="hidden" id="requestId" name="request_id" value=""/>
+
+                <input type="hidden" id="formStartTime" name="start" value=""/>
+                <input type="hidden" id="formEndTime" name="end" value=""/>
+                <input type="hidden" id="formTitle" name="title" value="ADULT TIME - Siri Dahl&#39;s FIRST BISEXUAL MMF THREESOME With Wolf Hudson &amp; Johnny Hill! FULL SCENE!"/>
+                <input type="hidden" id="formArtist" name="artist" value=""/>
+                <input type="hidden" id="formComment" name="comment" value=""/>
+                <input type="hidden" id="formGenre" name="genre" value=""/>
+                <input type="hidden" id="formAlbum" name="album" value=""/>
+                <input type="hidden" id="formYear" name="year" value=""/>
+                <input type="hidden" id="formTrack" name="track" value=""/>
+            </form>
+            <div class="text-end text-muted"><small>* Requires Dirpy Premium</small></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="premiumModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Dirpy Premium Required</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+				<div id="premiumMessageDiv"></div>
+				<div class="row">
+					<div class="col-sm-6 text-center">
+						<div class="card border-primary">
+							<div class="card-header">
+								<h3 class="card-title h6 mb-0">Monthly</h3>
+							</div>
+							<div class="card-body">
+                                
+                                    <span style="font-size: 18px"><strong>$9.99</strong></span>
+                                    <br>
+                                    <small>per month</small>
+                                    <br>
+                                    <span class="text-muted"><small>$9.99 billed <strong>monthly</strong></small></span>
+                                    <div class="panel-links" style="margin-top: 5px">
+                                        <button class="btn btn-info" onclick="return onboarding('pwbr');"><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Credit Card or Paypal</button>
+                                        <button class="btn btn-warning" onclick="return onboarding('pwbr', true);"><i class="fa-brands fa-btc"></i> Bitcoin</button>
+                                    </div>
+                                
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 text-center">
+						<div class="card border-primary">
+							<div class="card-header">
+								<h3 class="card-title h6 mb-0">Yearly <span class="badge bg-success" style="vertical-align: middle">Save 30%</span></h3>
+							</div>
+							<div class="card-body">
+                                
+                                    <span style="font-size: 18px"><strong>$6.99</strong></span>
+                                    <br>
+                                    <small>per month</small>
+                                    <br>
+                                    <span class="text-muted"><small>$83.99 billed <strong>annually</strong></small></span>
+                                    <div class="panel-links" style="margin-top: 5px">
+                                        <button class="btn btn-info" onclick="return onboarding('8xyg');"><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Credit Card or Paypal</button>
+                                        <button class="btn btn-warning" onclick="return onboarding('8xyg', true);"><i class="fa-brands fa-btc"></i> Bitcoin</button>
+                                    </div>
+                                
+							</div>
+						</div>
+					</div>
+					<p class="text-center text-muted mt-3 mb-0">Already a premium subscriber? Click the login link we emailed you or <a href="/user/recovery" target="_blank">recover it here</a>.</p>
+				</div>
+            </div>
+			<div class="modal-footer">
+				<button id="premiumFreeButton" class="btn btn-secondary" onclick="return downloadFree();">Download Free 640x480</button>
+				<a href="/pricing" class="btn btn-primary">Why Premium?</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body" align="center">
+			  <h5 id="downLoadModalHeaderText">Your download is being processed and will begin shortly. Please be patient!</h5>
+			  <div id="progressSpinner" class="cm-spinner"></div>
+				<br>
+				
+				<div class="text-center" style="margin-bottom: 2%; margin-right: 5%; margin-left: 5%;">
+					<a href="/pricing" target="_blank" style="text-decoration: none"><button class="btn btn-warning btn-lg btn-block w-100">Priority Download</button></a>
+				</div>
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" style="display:none;" id="modalBtn" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="proModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Dirpy PRO Required</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+				<div id="proMessageDiv">
+                    
+                </div>
+				<div class="row">
+					
+                        <div class="col-sm-6 text-center">
+                            <div class="card border-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title h6 mb-0">Monthly</h3>
+                                </div>
+                                <div class="card-body">
+                                    
+                                        <span style="font-size: 18px"><strong>$29.99</strong></span>
+                                        <br>
+                                        <small>per month</small>
+                                        <br>
+                                        <span class="text-muted"><small>$29.99 billed <strong>monthly</strong></small></span>
+                                        <div class="panel-links" style="margin-top: 5px">
+                                            <button class="btn btn-info" onclick="return onboarding('bm9b');"><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Credit Card or Paypal</button>
+                                            <button class="btn btn-warning" onclick="return onboarding('bm9b', true);"><i class="fa-brands fa-btc"></i> Bitcoin</button>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="card border-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title h6 mb-0">Yearly <span class="badge bg-success" style="vertical-align: middle">Save 30%</span></h3>
+                                </div>
+                                <div class="card-body">
+                                    
+                                        <span style="font-size: 18px"><strong>$19.99</strong></span>
+                                        <br>
+                                        <small>per month</small>
+                                        <br>
+                                        <span class="text-muted"><small>$239.99 billed <strong>annually</strong></small></span>
+                                        <div class="panel-links" style="margin-top: 5px">
+                                            <button class="btn btn-info" onclick="return onboarding('ht4r');"><i class="fa-solid fa-credit-card" aria-hidden="true"></i> Credit Card or Paypal</button>
+                                            <button class="btn btn-warning" onclick="return onboarding('ht4r', true);"><i class="fa-brands fa-btc"></i> Bitcoin</button>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+					
+					<p class="text-center text-muted mt-3 mb-0">Already a PRO subscriber? Click the login link we emailed you or <a href="/user/recovery" target="_blank">recover it here</a>.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+                <a href="/pricing" class="btn btn-primary">Why PRO?</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="onboardingModal" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Dirpy Premium Registration</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="return onOnboardingModalClose()"></button>
+			</div>
+			<div id="onboard-form">
+				<form id="onboardingForm" action="/onboard-bt" method="POST" enctype="multipart/form-data" onsubmit="return onOnboard();">
+					<div class="modal-body">
+						Please provide the following contact details to create your premium account:
+						<div class="row" style="padding-top:10px">
+							<div class="col-md-6 col-sm-6 col-12">
+								<div class="input-group">
+									<span class="input-group-text" id="sizing-addon2">First Name</span>
+								  <input type="text" name="first_name" class="form-control" aria-describedby="sizing-addon2" minlength="2" autocomplete="given-name"  required>
+								</div><!-- /input-group -->
+							</div><!-- /.col -->
+							<div class="col-md-6 col-sm-6 col-12">
+								<div class="input-group">
+									<span class="input-group-text" id="sizing-addon2">Last Name</span>
+								  <input type="text" name="last_name" class="form-control" aria-describedby="sizing-addon2" minlength="2" autocomplete="family-name"  required>
+								</div><!-- /input-group -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+						<div class="row" style="padding-top:10px">
+							<div class="col-lg-12 text-center">
+								<div class="input-group">
+									<span class="input-group-text" id="sizing-addon2">Email</span>
+									  <input type="email" name="email" id="email" class="form-control" aria-describedby="sizing-addon2" autocomplete="email"     required>
+								</div><!-- /input-group -->
+								
+								
+								
+					        </div><!-- /.col -->
+						</div><!-- /.row -->
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-primary" value="Next"/>
+					</div>
+					<input type="hidden" name="csrf_token" value="IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I"/>
+					<input type="hidden" name="plan_id" id="plan_id" value=""/>
+                    <input type="hidden" name="payment_method" id="payment_method" value=""/>
+				</form>
+			</div>
+			<div id="email-verification-form" style="display:none;">
+				<form id="verifyEmailForm" action="/verify-email" method="POST" enctype="multipart/form-data" onsubmit="return onVerifyEmail();">
+					<div class="modal-body">
+                        Please enter the verification code that was sent to your email or click the "Verify Email" link.
+						<div class="row" style="padding-top:10px">
+						<div class="col-lg-12 text-center">
+							<div class="input-group">
+								<span class="input-group-text" id="sizing-addon2">Verification Code</span>
+							  	<input type="text" name="verification_code" id="verification_code" class="form-control" aria-describedby="sizing-addon2" required>
+							</div><!-- /input-group -->
+								<span id="verificationFailure" style="display:none;" class="text-danger">
+                                    The verification code entered was invalid or expired. Please try again.
+								</span>
+					  		</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-primary" value="Next"/>
+					</div>
+					<input id="verify-email-form-customer-email" type="hidden" name="email" value=""/>
+					<input type="hidden" name="csrf_token" value="IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I"/>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    function onboarding(plan_id, is_bitcoin=false) {
+        document.getElementById('plan_id').value = plan_id;
+        document.getElementById('payment_method').value = is_bitcoin ? 'bitcoin' : 'braintree';
+        hideModal('proModal');
+        hideModal('premiumModal');
+        showModal('onboardingModal');
+    }
+
+    function onVerifyEmail() {
+        const verifyEmailForm = document.getElementById('verifyEmailForm');
+        const formData = new FormData(verifyEmailForm);
+
+        axios({
+            url: '/verify-email',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                'X-CSRFToken': 'IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I'
+            },
+            data: formData
+        }).then(function (response) {
+            if (response.status === 200) {
+                let json = response.data;
+                window.location.href = `${window.location.origin}/checkout?token=${json.uuid}`
+            } else {
+                return response;
+            }
+        }).catch(function (error) {
+            if (error.response.status === 401) {
+                document.getElementById('verification_code').setAttribute('aria-invalid', 'true');
+                document.getElementById('verificationFailure').style.display = '';
+            } else {
+                toastr.error('Sorry, something went wrong. Please retry your request or contact us if the problem persists.');
+            }
+        })
+        return false
+    }
+
+    function onOnboard() {
+        let onBoardingForm = document.getElementById('onboardingForm');
+        let formData = new FormData(onBoardingForm);
+        axios({
+            url: '/onboard-bt',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'multipart/form-data',
+                'X-CSRFToken': 'IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I'
+            },
+            data: formData
+        }).then(function (response) {
+            const status = response.status
+            if (status === 201) {
+                let json = response.data;
+                if (json.type === 'error' || json.type === 'warning') {
+                    toastr.error(json.message);
+                    if (json.reload) {
+                        setTimeout(function () {
+                            window.location.href = json.redirect_url;
+                        }, 3000);
+                    }
+                } else if (json.type == 'redirect') {
+                    window.location.href = json.redirect_url;
+                }
+            } else if (status === 200) {
+                document.getElementById('verify-email-form-customer-email').value = formData.get('email');
+                document.getElementById('onboard-form').style.display = 'none';
+                document.getElementById('email-verification-form').style.display = '';
+            } else {
+                return response;
+            }
+        }).catch(function (error) {
+            toastr.error('Sorry, something went wrong. Please retry your request or contact us if the problem persists.');
+        })
+        return false
+    }
+
+  function onOnboardingModalClose() {
+        document.getElementById('email').value = '';
+        document.getElementById('email-verification-form').style.display = 'none';
+        document.getElementById('onboard-form').style.display = '';
+  }
+</script>
+<script>
+    function hmsToSecondsOnly(str) {
+		let p = str.split(':'),
+			s = 0, m = 1;
+
+		while (p.length > 0) {
+			s += m * parseInt(p.pop(), 10);
+			m *= 60;
+		}
+		return s;
+	}
+
+    const durationReadableInt = parseInt(hmsToSecondsOnly("00:46:33"))
+
+    function setFileType(type) {
+        document.getElementById('fileType').value = type;
+
+        document.getElementById('audioBtn').disabled = true;
+        
+        document.getElementById('videoBtn').disabled = true;
+        
+        onDownload();
+    }
+
+    function enableButtons() {
+        document.getElementById('audioBtn').disabled = false;
+        
+        document.getElementById('videoBtn').disabled = false;
+        
+    }
+
+    function downloadFree() {
+        document.getElementById('videoQuality').value = document.getElementById('highestFreeVidQuality').value;
+        hideModal('premiumModal');
+        onDownload();
+    }
+
+    function isPremium() {
+        return "False" === "True";
+    }
+
+    function validateValues() {
+        if (durationReadableInt > 21600) {
+            toastr.error('The source video duration cannot exceed six (6) hours.')
+            return false;
+        } else if (document.getElementById('endTime').getAttribute('aria-invalid') || document.getElementById('startTime').getAttribute('aria-invalid')) {
+            toastr.error('Please enter valid start and end times.')
+            return false;
+        } else if (document.getElementById('filename').getAttribute('aria-invalid')) {
+            toastr.error('Filename must be at least one (1) character.')
+            return false;
+        } else {
+            let startInt = parseInt(document.getElementById('formStartTime').value);
+            let endInt = parseInt(document.getElementById('formEndTime').value);
+
+            if ((startInt > endInt) || (startInt === endInt && durationReadableInt !== 0)) {
+                toastr.error('Please enter a start time that is less than the end time.')
+                return false;
+            } else if (startInt===endInt && durationReadableInt === 0 && !isPremium()) {
+				toastr.error('Processing videos that do not provide a duration is an experimental premium feature. Please subscribe to Dirpy Premium or try a different video source.')
+				return false;
+			}
+            return true;
+        }
+    }
+
+    function notifyOfEmail() {
+        document.getElementById('modalBtn').style.display = '';
+        document.getElementById('downLoadModalHeaderText').textContent = "The file you requested is still processing. As a premium subscriber, you will automatically receive an email when your file is ready for download.";
+    }
+
+    function waitForDownload(requestId) {
+        const maxRetries = 5;
+        const retryDelay = 1000;
+        let retryCount = 0;
+        let isRequestComplete = false;
+        let socket = null;
+        let reconnectTimeout = null;
+        let premEmailInterval;
+        if (isPremium()) {
+            premEmailInterval = window.setTimeout(function() {
+                notifyOfEmail();
+            }, 1000 * parseInt("0"));
+        }
+
+        function connect() {
+            if (socket) {
+                socket.onclose = null;
+                socket.close();
+            }
+            socket = new WebSocket("wss://atc.dirpy.com/request");
+
+            socket.onopen = function () {
+                retryCount = 0;
+                socket.send(JSON.stringify({request_id: requestId}));
+            };
+
+            socket.onmessage = function (event) {
+                try {
+                    let data = JSON.parse(event.data);
+                    if (data.request_status === 'COMPLETE' || data.request_status === 'ERROR') {
+                        isRequestComplete = true;
+                        socket.close();
+                        handleResult();
+                    }
+                } catch (e) {
+                    console.error("Invalid message received from websocket", e);
+                }
+            };
+
+            socket.onclose = function(event) {
+                if (isRequestComplete) return;
+                if (retryCount < maxRetries) {
+                    retryCount++;
+                    reconnectTimeout = setTimeout(connect, retryDelay);
+                } else {
+                    handleError();
+                }
+            };
+
+            socket.onerror = function(err) {
+                console.error("WebSocket Error:", err);
+            };
+        }
+
+        function handleResult() {
+            if (isPremium()) clearTimeout(premEmailInterval);
+
+            let downloadStatusForm = new FormData();
+            downloadStatusForm.append("request_id", requestId);
+            downloadStatusForm.append("csrf_token", "IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I");
+
+            axios({
+                url: '/download/status',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'X-CSRFToken': 'IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I'
+                },
+                data: downloadStatusForm
+            }).then(function (response) {
+                let status = response.status;
+
+                if (status === 201) {
+                    hideModal('downloadModal');
+                    let json = response.data;
+
+                    if (json.type === 'error') {
+                        toastr.error(json.message);
+                        if (json.reload) window.location.href = json.redirect_url;
+                    } else if (json.type === 'premium') {
+                        document.getElementById('premiumFreeButton').style.display = 'none';
+                        document.getElementById('premiumMessageDiv').innerHTML = "<p>" + json.message + "</p>";
+                        if (json.is_quality) {
+                            
+                                document.getElementById('premiumFreeButton').style.display = '';
+                            
+                        } else {
+                            document.getElementById('premiumFreeButton').style.display = 'none';
+                        }
+                        showModal('premiumModal');
+                    } else if (json.type === 'pro') {
+                        document.getElementById('proMessageDiv').innerHTML = "<p>" + json.message + "</p>";
+                        showModal('proModal');
+                    }
+
+                } else if (status === 200) {
+                    let fileStatus = response.data.file_status;
+                    if (fileStatus === 'COMPLETE') {
+                        document.getElementById('requestId').value = requestId;
+                        document.getElementById('downloadForm').submit();
+                        document.getElementById('requestId').value = '';
+                        document.getElementById('modalBtn').style.display = '';
+                        document.getElementById('downLoadModalHeaderText').textContent = "Your file is now available. Thank you for using Dirpy!";
+                        document.getElementById('progressSpinner').style.display = 'none';
+                        document.getElementById('downloadModal').addEventListener('hidden.bs.modal', function (e) {
+                            document.getElementById('downLoadModalHeaderText').textContent = "Your download is being processed and will begin shortly. Please be patient!";
+                        }, {once: true});
+                    }
+                }
+                enableButtons();
+            }).catch(function (error) {
+                handleError();
+            });
+        }
+
+        function handleError() {
+            toastr.error('Sorry, something went wrong. Please retry your request or contact us if the problem persists.');
+            hideModal('downloadModal');
+            enableButtons();
+            if (isPremium()) clearTimeout(premEmailInterval);
+        }
+        connect();
+    }
+
+    function onDownload() {
+        document.getElementById('formStartTime').value = hmsToSecondsOnly(document.getElementById('startTime').value);
+        document.getElementById('formEndTime').value = hmsToSecondsOnly(document.getElementById('endTime').value);
+        document.getElementById('requestId').value = "";
+        if (validateValues()) {
+            if (document.getElementById('requestId').value !== "") {
+                return true;
+            }
+            document.getElementById('outputFileName').value = document.getElementById('filename').value;
+            document.getElementById('formTitle').value = document.getElementById('title').value;
+            document.getElementById('formArtist').value = document.getElementById('artist').value;
+            document.getElementById('formComment').value = document.getElementById('comment').value;
+            document.getElementById('formGenre').value = document.getElementById('genre').value;
+            document.getElementById('formAlbum').value = document.getElementById('album').value;
+            document.getElementById('formYear').value = document.getElementById('year').value;
+            document.getElementById('formTrack').value = document.getElementById('track').value;
+            document.getElementById('subtitles').value = document.getElementById('subtitles_checkbox')?.checked ?? false;
+
+            const downloadForm = document.getElementById('downloadForm');
+            const downloadFormData = new FormData(downloadForm);
+
+            axios({
+                url: '/studio',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'X-CSRFToken': 'IjBlOGUxZGIwMTRiN2VhOGVmZDI2YjczY2U2MjEyZWFjYTIyZDk2NWUi.afs93g.FP-SwYgeHj2Oh_s6K3vtLDqrx9I'
+                },
+                data: downloadFormData
+            }).then(function (response) {
+                const status = response.status;
+                if (status === 201) {
+                    const json = response.data;
+                    if (json.type === 'error') {
+                        toastr.error(json.message);
+                        if (json.reload) {
+                            window.location.href = json.redirect_url;
+                        }
+                        hideModal('downloadModal');
+                        enableButtons();
+                    } else if (json.type === 'premium') {
+                        document.getElementById('premiumMessageDiv').innerHTML = "<p>" + json.message + "</p>";
+                        document.getElementById('premiumFreeButton').style.display = 'none';
+                        if (json.is_quality) {
+                            
+                                document.getElementById('premiumFreeButton').style.display = '';
+                            
+                        } else {
+                            document.getElementById('premiumFreeButton').style.display = 'none';
+                        }
+                        hideModal('downloadModal');
+                        showModal('premiumModal');
+                        enableButtons();
+                    } else if (json.type === 'pro') {
+                        document.getElementById('proMessageDiv').innerHTML = "<p>" + json.message + "</p>";
+                        hideModal('downloadModal');
+                        showModal('proModal');
+                        enableButtons();
+                    }
+                } else if (status === 200) {
+                    let requestId = response.data.request_id;
+                    document.getElementById('modalBtn').style.display = 'none';
+                    document.getElementById('progressSpinner').style.display = '';
+                    showModal('downloadModal');
+                    enableButtons();
+                    waitForDownload(requestId);
+                } else {
+                    enableButtons();
+                    return response;
+                }
+                document.getElementById('requestId').value = "";
+            }).catch(function (error) {
+                toastr.error('Sorry, something went wrong. Please retry your request or contact us if the problem persists.');
+                enableButtons();
+                hideModal('downloadModal');
+                document.getElementById('requestId').value = "";
+            })
+            return false;
+        } else {
+            enableButtons();
+            return false;
+        }
+    }
+
+    function shouldBeValidated(field) {
+        return (
+            !(field.getAttribute("readonly") || field.readonly) &&
+            !(field.getAttribute("disabled") || field.disabled) &&
+            (field.getAttribute("pattern") || field.getAttribute("required") || field.getAttribute("premium"))
+        );
+    }
+
+    function instantValidation(field) {
+
+        let invalid = (
+            (field.getAttribute("required") && !field.value)
+            || (field.getAttribute("pattern") && field.value && !new RegExp(field.getAttribute("pattern")).test(field.value))
+        );
+
+        if (!invalid) {
+            let seconds;
+            if (field.id === "endTime") {
+                seconds = parseInt(hmsToSecondsOnly(field.value));
+                if (seconds < 0 || seconds > durationReadableInt || (seconds === 0 && durationReadableInt > 0)) {
+                    invalid = true;
+                }
+            } else if (field.id === "startTime") {
+                seconds = hmsToSecondsOnly(field.value);
+                if (seconds < 0 || seconds > durationReadableInt || (seconds === durationReadableInt && durationReadableInt > 0)) {
+                    invalid = true;
+                }
+            }
+        }
+
+        let nonPremium = false;
+
+        if (!nonPremium && field.getAttribute("aria-warning")) {
+            field.removeAttribute("aria-warning");
+        } else if (nonPremium) {
+            field.setAttribute("aria-warning", "true");
+        }
+
+        if (!invalid && field.getAttribute("aria-invalid")) {
+            field.removeAttribute("aria-invalid");
+        } else if (invalid && !field.getAttribute("aria-invalid")) {
+            field.setAttribute("aria-invalid", "true");
+        }
+
+    }
+
+    function addEvent(node, type, callback) {
+        if (node.addEventListener) {
+            node.addEventListener(type, function(e) {
+                callback(e, e.target);
+            }, false);
+        } else if (node.attachEvent) {
+            node.attachEvent('on' + type, function(e) {
+                callback(e, e.srcElement);
+            });
+        }
+    }
+
+    addEvent(document, "change", function(e, target) {
+        if (shouldBeValidated(target)) {
+            instantValidation(target);
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var video = document.getElementById("media-player");
+        var source = document.getElementById("media-source");
+        var thumbnail = document.getElementById("fallback-thumbnail");
+        const form = document.getElementById("urlSubmit");
+        const submitButton = document.getElementById("submitBtn");
+
+        form.addEventListener("submit", function () {
+          submitButton.disabled = true;
+          toastr.info('Dirpy is gathering information on your video. Just a moment!');
+        });
+
+        function showThumbnail() {
+            video.style.display = "none";
+            if (thumbnail) {
+                thumbnail.style.display = "block";
+            }
+        }
+        if (video) {
+            video.onerror = showThumbnail;
+        }
+        if (source) {
+            source.onerror = showThumbnail;
+        }
+    });
+</script>
+
+        <div class="navbar-clearance" aria-hidden="true"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.26.1/dist/axios.min.js" crossorigin="anonymous"></script>
+    <script src="/static/js/utilities.js?v=2"></script>
+    
+    <script type="text/javascript">
+    toastr.options.closeDuration = 600;
+    
+        
+    
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f783a487a355e2d',t:'MTc3ODA3MzA1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
